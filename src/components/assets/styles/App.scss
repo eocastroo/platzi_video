@@ -1,0 +1,27 @@
+@import "./Vars.scss";
+@import "./Media.scss";
+
+body {
+    margin: 0;
+    font-family: $theme-font;
+    background-image: linear-gradient(#2f3134, #b7bebc);
+    
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+
+  .button {
+    background-color: rgba(214, 221, 221, 0.253);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Muli', sans-serif;
+    height: 50px;
+    letter-spacing: 1px;
+    margin: 10px 0;
+  }
