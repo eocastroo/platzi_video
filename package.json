@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "predeploy":"npm run build",
+    "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js",
     "start": "webpack serve --config webpack.config.dev.js"
@@ -17,6 +19,7 @@
     "@babel/preset-react": "^7.12.10",
     "babel-loader": "^8.2.2",
     "classnames": "^2.2.6",
+    "gh-pages": "^6.0.0",
     "md5": "^2.3.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
@@ -25,6 +28,7 @@
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5"
   },
+  "homepage": "https://eocastroo.github.io/platzi_video",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "chokidar": "^3.5.1",

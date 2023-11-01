@@ -1,9 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
-const TerserPlugin = require ('terser-webpack-plugin')
-const {cleanWebpackPlugin} = require('clean-webpack-plugin')
+
 
 
 module.exports = {
@@ -15,9 +13,7 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx'],
-    alias: {
-     '@components': path.resolve(__dirname, 'src/components/')
-    }
+
   },
   mode:'production',
 
@@ -71,15 +67,6 @@ module.exports = {
       filename: 'assets/[hame].css'
     }),
 
-    new cleanWebpackPlugin(),
-  ],
+  ]
 
-  optimization: {
-    minimize: true,
-    minimizer: [
-      new CssMinimizerPlugin(),
-      new TerserPlugin(),
-    ]
-
-  }
 }
